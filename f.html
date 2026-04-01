@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FireAI - The Complete Social Media Growth Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            200: '#fed7aa',
+                            300: '#fdba74',
+                            400: '#fb923c',
+                            500: '#f97316',
+                            600: '#ea580c',
+                            700: '#c2410c',
+                            800: '#9a3412',
+                            900: '#7c2d12',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-text {
+            background: linear-gradient(to right, #ea580c, #f97316);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .table-row-hover:hover { background-color: #fff7ed; }
+        
+        /* Custom Scrollbar for sidebar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f8fafc; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+    </style>
+</head>
+<body class="bg-white text-slate-600 antialiased selection:bg-brand-500 selection:text-white flex flex-col min-h-screen relative">
+
+    <!-- Mobile Header -->
+    <header class="bg-white border-b border-slate-200 p-4 flex justify-between items-center sticky top-0 z-40 md:hidden">
+        <div class="font-bold text-slate-900 flex items-center gap-2">
+            <img src="https://fireai.in/icon512_maskable.png" alt="FireAI Logo" class="w-6 h-6 rounded">
+            FireAI
+        </div>
+        <button onclick="toggleMenu()" class="text-slate-600 focus:outline-none p-1">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+        </button>
+    </header>
+
+    <!-- Mobile Overlay -->
+    <div id="mobile-menu-overlay" class="fixed inset-0 bg-slate-900/50 z-40 hidden transition-opacity duration-300 md:hidden" onclick="toggleMenu()"></div>
+
+    <div class="flex flex-1 relative">
+        
+        <!-- Sidebar Navigation -->
+        <aside id="sidebar" class="w-64 lg:w-80 bg-slate-50 border-r border-slate-200 fixed inset-y-0 left-0 h-full overflow-y-auto z-50 transform -translate-x-full transition-transform duration-300 md:translate-x-0 md:fixed md:block flex flex-col">
+            <div class="p-6 flex-1">
+                <div class="flex justify-between items-center mb-8">
+                    <div class="text-2xl font-bold text-slate-900 flex items-center gap-2">
+                        <img src="https://fireai.in/icon512_maskable.png" alt="FireAI Logo" class="w-6 h-6 rounded">
+                        FireAI
+                    </div>
+                    <button onclick="toggleMenu()" class="text-slate-500 focus:outline-none md:hidden p-1">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                </div>
+                <div class="text-xs text-slate-500 font-bold tracking-wider mb-4 uppercase">Growth Strategy</div>
+                
+                <nav class="space-y-1">
+                    <a href="#hero" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">Cover</a>
+                    <a href="#sec-00" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">00. Core Content Engine</a>
+                    <a href="#sec-01" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">01. Growth Funnel System</a>
+                    <a href="#sec-02A" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">02A. LinkedIn Strategy</a>
+                    <a href="#sec-02B" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">02B. Twitter / X Strategy</a>
+                    <a href="#sec-02C" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">02C. Instagram Strategy</a>
+                    <a href="#sec-02D" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">02D. YouTube Strategy</a>
+                    <a href="#sec-03" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">03. Repurposing System</a>
+                    <a href="#sec-04" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">04. Lead Generation System</a>
+                    <a href="#sec-05" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">05. Distribution System</a>
+                    <a href="#sec-06" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">06. Execution Plan</a>
+                    <a href="#sec-07" class="block px-3 py-2 rounded-md text-sm text-slate-600 hover:bg-white hover:text-brand-600 hover:shadow-sm transition">07. Strategic Insights</a>
+                    <a href="#sec-08" class="block px-3 py-2 rounded-md text-sm text-brand-600 bg-white shadow-sm border-l-2 border-brand-500 font-medium mt-4">08. Why Hire I</a>
+                </nav>
+            </div>
+            
+            <div class="p-6 border-t border-slate-200 mt-auto bg-slate-50">
+                <div class="text-xs text-slate-500 mb-2 font-bold uppercase tracking-wider">PREPARED BY</div>
+                <div class="font-bold text-slate-900 text-sm">Rehan Firoz Kadri</div>
+                <div class="text-xs text-slate-500 mt-1">Growth Marketer &middot; B2B SaaS Strategy</div>
+                <div class="text-xs text-brand-600 mt-2 font-mono font-medium bg-brand-50 inline-block px-2 py-1 rounded">CONFIDENTIAL &middot; 2026</div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="flex-1 md:ml-64 lg:ml-80 w-full overflow-x-hidden">
+            
+            <!-- Hero / Cover Section -->
+            <section id="hero" class="min-h-[80vh] flex flex-col justify-center p-5 md:p-12 lg:p-24 border-b border-slate-200 relative overflow-hidden bg-slate-50/50">
+                <!-- Decorative background blobs -->
+                <div class="absolute top-0 right-0 -mr-16 md:-mr-32 -mt-16 md:-mt-32 w-64 md:w-96 h-64 md:h-96 rounded-full bg-brand-200 blur-3xl opacity-40 pointer-events-none"></div>
+                <div class="absolute bottom-0 left-0 -ml-16 md:-ml-32 -mb-16 md:-mb-32 w-48 md:w-80 h-48 md:h-80 rounded-full bg-orange-100 blur-3xl opacity-60 pointer-events-none"></div>
+                
+                <div class="flex flex-wrap items-center gap-2 md:gap-3 mb-6 relative z-10">
+                    <span class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider bg-white text-slate-700 rounded-full border border-slate-200 shadow-sm">FireAI.in</span>
+                    <span class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider bg-white text-slate-500 rounded-full border border-slate-200 shadow-sm">B2B SaaS 2026</span>
+                    <span class="px-2 md:px-3 py-1 text-[10px] md:text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-brand-500 to-brand-600 text-white rounded-full shadow-md">$10K Report Grade</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-7xl font-extrabold text-slate-900 leading-tight mb-4 md:mb-6 relative z-10">
+                    The Complete <br>
+                    <span class="gradient-text">Social Media</span><br>
+                    Growth Plan.
+                </h1>
+                
+                <h2 class="text-lg sm:text-xl md:text-2xl text-slate-600 font-light mb-8 md:mb-10 max-w-3xl relative z-10">
+                    Building India's Leading Decision Intelligence Brand. <br>
+                    <span class="text-brand-600 font-medium">Authority &rarr; Traffic &rarr; Pipeline.</span>
+                </h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12 max-w-3xl relative z-10">
+                    <div class="border-l-4 border-brand-500 pl-3 md:pl-4 bg-white/60 p-2 rounded-r-lg">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900">7</div>
+                        <div class="text-xs md:text-sm text-slate-500 font-medium">Content Types<br>Full Engine</div>
+                    </div>
+                    <div class="border-l-4 border-brand-500 pl-3 md:pl-4 bg-white/60 p-2 rounded-r-lg">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900">4+</div>
+                        <div class="text-xs md:text-sm text-slate-500 font-medium">Platforms<br>LI, X, IG, YT</div>
+                    </div>
+                    <div class="border-l-4 border-brand-500 pl-3 md:pl-4 bg-white/60 p-2 rounded-r-lg">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900">1</div>
+                        <div class="text-xs md:text-sm text-slate-500 font-medium">Lead Gen<br>System</div>
+                    </div>
+                    <div class="border-l-4 border-brand-500 pl-3 md:pl-4 bg-white/60 p-2 rounded-r-lg">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900">90</div>
+                        <div class="text-xs md:text-sm text-slate-500 font-medium">Day Plan<br>Execution Ready</div>
+                    </div>
+                </div>
+                
+                <div class="bg-white border border-slate-200 p-5 md:p-6 rounded-xl max-w-3xl shadow-sm relative z-10">
+                    <p class="text-slate-700 text-base md:text-lg mb-5 md:mb-6 italic font-medium">"Built for a founder who wants FireAI to be the most recognized AI analytics brand in India. Execution-ready. No fluff."</p>
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-t border-slate-100 pt-4">
+                        <div>
+                            <div class="font-bold text-slate-900 text-base md:text-lg">Rehan Firoz Kadri</div>
+                            <div class="text-xs md:text-sm text-slate-500">Growth Marketer &middot; BTech CSE</div>
+                        </div>
+                        <div class="text-xs md:text-sm text-brand-600 font-medium text-left sm:text-right">
+                            <div>therehankadri@gmail.com &middot; +91 8668980389</div>
+                            <div>linkedin.com/in/therehankadri</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 md:mt-8 text-[10px] md:text-xs text-slate-400 font-mono uppercase tracking-widest relative z-10 font-bold">
+                    Based on live website audit of fireai.in &middot; The Rehan Kadri frameworks &middot; April 2026
+                </div>
+            </section>
+
+            <!-- 00. Core Content Engine -->
+            <section id="sec-00" class="p-5 md:p-12 lg:p-24 border-b border-slate-200">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">00</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Core Content Engine</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-8 md:mb-10 font-medium">The 7 content types that power all platforms</p>
+                
+                <blockquote class="border-l-4 border-brand-500 pl-4 md:pl-6 mb-10 md:mb-12 text-lg md:text-xl text-slate-800 font-medium italic bg-brand-50 py-4 md:py-5 pr-4 md:pr-5 rounded-r-lg shadow-sm">
+                    "Brands that win are not the ones who post the most - they build a content system so clear that every piece has a defined role." 
+                    <span class="block text-xs md:text-sm text-brand-600 mt-2 md:mt-3 not-italic font-bold uppercase tracking-wider">- The Rehan Kadri Framework</span>
+                </blockquote>
+
+                <p class="text-slate-600 mb-8 text-base md:text-lg">FireAI's content engine is built on one principle: every piece of content must do a job. <br class="hidden md:block">
+                <span class="text-slate-900 font-bold mt-2 inline-block">Awareness &rarr; Education &rarr; Proof &rarr; Conversion.</span> No content is published without a defined role.</p>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mb-10 md:mb-12">
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 border-t-4 border-t-red-500 shadow-sm">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900 mb-1 md:mb-2">40%</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-wider">Pain Content</div>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 border-t-4 border-t-brand-500 shadow-sm">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900 mb-1 md:mb-2">30%</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-wider">Proof Content</div>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 border-t-4 border-t-blue-500 shadow-sm">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900 mb-1 md:mb-2">20%</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-wider">Education</div>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 border-t-4 border-t-purple-500 shadow-sm">
+                        <div class="text-2xl md:text-3xl font-black text-slate-900 mb-1 md:mb-2">10%</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-wider">Contrarian</div>
+                    </div>
+                </div>
+
+                <div class="bg-brand-50 border border-brand-100 p-5 md:p-6 rounded-xl mb-10 md:mb-12">
+                    <h4 class="font-bold text-slate-900 mb-2 text-base md:text-lg">Why This Mix Works</h4>
+                    <p class="text-sm md:text-base text-slate-700">Pain attracts the right ICP and triggers self-identification. Proof removes objections and accelerates conversion. Education retains and builds trust. Contrarian content spreads to new audiences and builds differentiation.</p>
+                </div>
+
+                <div class="overflow-x-auto shadow-sm rounded-xl border border-slate-200 w-full">
+                    <table class="w-full text-left border-collapse bg-white min-w-[600px]">
+                        <thead>
+                            <tr class="bg-slate-50 text-xs uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                                <th class="p-3 md:p-4 font-bold">Type</th>
+                                <th class="p-3 md:p-4 font-bold">Role</th>
+                                <th class="p-3 md:p-4 font-bold">Platforms</th>
+                                <th class="p-3 md:p-4 font-bold">Function</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs md:text-sm text-slate-600 divide-y divide-slate-100">
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">01 Pain Amplification</td>
+                                <td class="p-3 md:p-4 text-red-600 font-semibold bg-red-50/50">Awareness - ICP ID</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">LinkedIn, Twitter, IG Reels</td>
+                                <td class="p-3 md:p-4">Surfaces exact problems FireAI solves - slow reports, analyst bottlenecks.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">02 Vertical Case Studies</td>
+                                <td class="p-3 md:p-4 text-brand-600 font-semibold bg-brand-50/50">Trust - Social Proof</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">LinkedIn, YouTube, IG</td>
+                                <td class="p-3 md:p-4">Real customer results by industry: D2C, F&B, Cargo, FMCG. Real numbers.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">03 Educational Authority</td>
+                                <td class="p-3 md:p-4 text-blue-600 font-semibold bg-blue-50/50">Authority - SEO</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">YouTube, LinkedIn, Twitter</td>
+                                <td class="p-3 md:p-4">Teaches BI concepts, data decision frameworks for Indian founders.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">04 Product Proof</td>
+                                <td class="p-3 md:p-4 text-green-600 font-semibold bg-green-50/50">Conversion - Trust</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">All platforms (Short clips)</td>
+                                <td class="p-3 md:p-4">Shows FireAI working live. Ask a question, get an answer. Demonstrated.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">05 Founder Stories</td>
+                                <td class="p-3 md:p-4 text-indigo-600 font-semibold bg-indigo-50/50">Authority - Long Trust</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">YouTube, Podcast, LI clips</td>
+                                <td class="p-3 md:p-4">Conversations with Indian founders about data decisions they got wrong.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">06 Contrarian Takes</td>
+                                <td class="p-3 md:p-4 text-purple-600 font-semibold bg-purple-50/50">Virality - Edge</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">Twitter, LinkedIn text</td>
+                                <td class="p-3 md:p-4">Bold positions on BI tools. 'Excel is not a strategy.' Reaches ICP.</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900">07 Community Intelligence</td>
+                                <td class="p-3 md:p-4 text-pink-600 font-semibold bg-pink-50/50">Engagement</td>
+                                <td class="p-3 md:p-4 font-medium text-slate-700">Twitter, LI polls, IG Stories</td>
+                                <td class="p-3 md:p-4">Polls, questions. 'How long does your team take to build a report?'</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 01. Growth Funnel System -->
+            <section id="sec-01" class="p-5 md:p-12 lg:p-24 border-b border-slate-200">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">01</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Growth Funnel System</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-4 md:mb-6 font-medium">TOFU &rarr; MOFU &rarr; BOFU, Stage-by-stage integration</p>
+                <p class="text-slate-600 mb-8 md:mb-10 text-sm md:text-lg">Every lead FireAI will ever close travels through 6 stages. This funnel maps exactly how Twitter/X, Instagram, LinkedIn, and YouTube work together to capture and convert the Indian B2B SaaS buyer.</p>
+
+                <!-- VISUAL FUNNEL REPRESENTATION -->
+                <div class="flex flex-col items-center w-full mb-12 md:mb-16 relative px-2">
+                    <!-- TOFU Layer -->
+                    <div class="w-full max-w-3xl bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-4 md:p-6 rounded-t-2xl shadow-sm text-center relative z-30">
+                        <span class="absolute left-4 md:left-6 top-4 md:top-1/2 md:-translate-y-1/2 text-[10px] md:text-sm font-black uppercase text-red-400 tracking-widest hidden sm:block">TOFU</span>
+                        <h4 class="font-black text-red-600 text-lg md:text-xl tracking-wide">AWARENESS & INTEREST</h4>
+                        <p class="text-xs md:text-sm text-slate-700 font-medium mt-1 md:mt-2">LinkedIn Pain Posts &middot; Twitter Viral Threads &middot; IG Reels</p>
+                        <div class="mt-2 md:mt-3 text-[10px] md:text-xs bg-white inline-block px-2 md:px-3 py-1 rounded border border-red-100 text-red-500 font-bold shadow-sm">Goal: Scroll Interruption & ICP ID</div>
+                    </div>
+                    
+                    <!-- MOFU Layer -->
+                    <div class="w-[95%] md:w-[90%] max-w-2xl bg-gradient-to-r from-orange-50 to-yellow-50 border-x border-b border-orange-200 p-4 md:p-6 shadow-sm text-center relative z-20">
+                        <span class="absolute left-4 md:left-6 top-4 md:top-1/2 md:-translate-y-1/2 text-[10px] md:text-sm font-black uppercase text-orange-400 tracking-widest hidden sm:block">MOFU</span>
+                        <h4 class="font-black text-orange-600 text-lg md:text-xl tracking-wide">CONSIDERATION & INTENT</h4>
+                        <p class="text-xs md:text-sm text-slate-700 font-medium mt-1 md:mt-2">YouTube Deep Dives &middot; LinkedIn Case Studies &middot; Newsletters</p>
+                        <div class="mt-2 md:mt-3 text-[10px] md:text-xs bg-white inline-block px-2 md:px-3 py-1 rounded border border-orange-100 text-orange-500 font-bold shadow-sm">Goal: Build Trust & Prove Authority</div>
+                    </div>
+                    
+                    <!-- BOFU Layer -->
+                    <div class="w-[90%] md:w-[80%] max-w-xl bg-gradient-to-r from-green-50 to-emerald-50 border-x border-b border-green-200 p-4 md:p-6 rounded-b-2xl shadow-sm text-center relative z-10">
+                        <span class="absolute left-4 md:left-6 top-4 md:top-1/2 md:-translate-y-1/2 text-[10px] md:text-sm font-black uppercase text-green-500 tracking-widest hidden sm:block">BOFU</span>
+                        <h4 class="font-black text-green-700 text-lg md:text-xl tracking-wide">CONVERSION & LOYALTY</h4>
+                        <p class="text-xs md:text-sm text-slate-700 font-medium mt-1 md:mt-2">ManyChat Automations &middot; Direct DMs &middot; ROI Calculators</p>
+                        <div class="mt-2 md:mt-3 text-[10px] md:text-xs bg-white inline-block px-2 md:px-3 py-1 rounded border border-green-200 text-green-600 font-bold shadow-sm">Goal: Remove Objections & Book Demo</div>
+                    </div>
+                    
+                    <!-- Pipeline drop -->
+                    <div class="h-6 md:h-10 w-2 bg-gradient-to-b from-green-200 to-brand-500 mt-0"></div>
+                    <div class="bg-brand-500 text-white font-black px-4 md:px-6 py-1.5 md:py-2 rounded-full shadow-md text-sm md:text-lg uppercase tracking-widest">Pipeline</div>
+                </div>
+
+                <!-- 6-Stage Narrative Timeline -->
+                <div class="mb-12 md:mb-16 space-y-3">
+                    <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-lg ml-0 w-full relative shadow-sm border-l-4 border-l-red-500">
+                        <span class="absolute right-4 top-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-red-500 bg-red-50 px-2 py-1 rounded">TOFU</span>
+                        <h4 class="font-bold text-slate-900 mb-1 text-sm md:text-base">1. AWARENESS</h4>
+                        <p class="text-xs md:text-sm text-slate-600">A founder scrolling <strong class="text-slate-900">Twitter (X)</strong> sees a viral thread on margin leakage, or an <strong class="text-slate-900">IG Reel</strong> breaking down Excel chaos. They recognize their own pain.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-lg ml-2 md:ml-4 w-[calc(100%-0.5rem)] md:w-[calc(100%-1rem)] relative shadow-sm border-l-4 border-l-brand-400">
+                        <span class="absolute right-4 top-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-brand-500 bg-brand-50 px-2 py-1 rounded">TOFU</span>
+                        <h4 class="font-bold text-slate-900 mb-1 text-sm md:text-base">2. INTEREST</h4>
+                        <p class="text-xs md:text-sm text-slate-600">They click through to FireAI's <strong class="text-slate-900">LinkedIn page</strong>, scroll a 10-slide carousel, and hit follow. They join the newsletter. Interest is confirmed.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-lg ml-4 md:ml-8 w-[calc(100%-1rem)] md:w-[calc(100%-2rem)] relative shadow-sm border-l-4 border-l-yellow-500">
+                        <span class="absolute right-4 top-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-yellow-600 bg-yellow-50 px-2 py-1 rounded">MOFU</span>
+                        <h4 class="font-bold text-slate-900 mb-1 text-sm md:text-base">3. CONSIDERATION</h4>
+                        <p class="text-xs md:text-sm text-slate-600">They binge a 12-min <strong class="text-slate-900">YouTube deep-dive</strong> ('The Monday Review') and compare FireAI's mobile app directly against Tableau.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-lg ml-6 md:ml-12 w-[calc(100%-1.5rem)] md:w-[calc(100%-3rem)] relative shadow-sm border-l-4 border-l-green-400">
+                        <span class="absolute right-4 top-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-green-600 bg-green-50 px-2 py-1 rounded">MOFU</span>
+                        <h4 class="font-bold text-slate-900 mb-1 text-sm md:text-base">4. INTENT</h4>
+                        <p class="text-xs md:text-sm text-slate-600">They comment 'DEMO' on an <strong class="text-slate-900">Instagram Reel</strong> or reply on <strong class="text-slate-900">X</strong>. ManyChat instantly fires the Calendly link to their DM. Pipeline entry confirmed.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-lg ml-8 md:ml-16 w-[calc(100%-2rem)] md:w-[calc(100%-4rem)] relative shadow-sm border-l-4 border-l-blue-500">
+                        <span class="absolute right-4 top-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-blue-600 bg-blue-50 px-2 py-1 rounded">BOFU</span>
+                        <h4 class="font-bold text-slate-900 mb-1 text-sm md:text-base">5. CONVERSION</h4>
+                        <p class="text-xs md:text-sm text-slate-600">15-min demo call. A customized ROI calculator is shown live. Deal closed. Customer is directly attributed to the multi-touch social engine.</p>
+                    </div>
+                    <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-lg ml-10 md:ml-20 w-[calc(100%-2.5rem)] md:w-[calc(100%-5rem)] relative shadow-sm border-l-4 border-l-purple-500">
+                        <span class="absolute right-4 top-4 text-[10px] md:text-xs font-bold uppercase tracking-widest text-purple-600 bg-purple-50 px-2 py-1 rounded">BOFU</span>
+                        <h4 class="font-bold text-slate-900 mb-1 text-sm md:text-base">6. LOYALTY</h4>
+                        <p class="text-xs md:text-sm text-slate-600">They join the <strong class="text-slate-900">Telegram/WhatsApp</strong> community. They share FireAI content, and their results become next month's <strong class="text-slate-900">YouTube</strong> case study.</p>
+                    </div>
+                </div>
+
+                <!-- Stage Deep Dive Tables -->
+                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">Omni-Channel Deep Dive</h3>
+                <div class="space-y-4 md:space-y-6">
+                    <!-- TOFU -->
+                    <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                        <div class="bg-slate-50 p-3 md:p-4 border-b border-slate-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">TOFU - TOP OF FUNNEL</h4>
+                            <span class="text-[10px] md:text-xs font-bold bg-white border border-slate-200 text-slate-600 px-2 md:px-3 py-1 rounded-full shadow-sm w-max">Awareness & Interest</span>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            <div>
+                                <p class="text-[10px] md:text-xs text-brand-600 font-bold mb-1 uppercase tracking-wider">Multi-Platform Story</p>
+                                <p class="text-slate-700 text-xs md:text-sm">A founder is targeted across platforms. They see an <strong class="text-slate-900">IG Reel</strong> highlighting Excel bottlenecks, read a viral <strong class="text-slate-900">Twitter thread</strong> on data loss, and finally see a <strong class="text-slate-900">LinkedIn Pain Post</strong>. They stop scrolling, recognize their exact chaos, and enter the FireAI ecosystem.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] md:text-xs text-brand-600 font-bold mb-1 uppercase tracking-wider">Trigger & Metric</p>
+                                <p class="text-slate-700 text-xs md:text-sm">ICP self-identifies. Follows page across platforms. Watches demo Reel.<br><strong class="text-slate-900 mt-1 inline-block">Metric:</strong> Impressions, profile visits, watch time, Twitter saves, IG shares.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MOFU -->
+                    <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                        <div class="bg-slate-50 p-3 md:p-4 border-b border-slate-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">MOFU - MIDDLE OF FUNNEL</h4>
+                            <span class="text-[10px] md:text-xs font-bold bg-white border border-slate-200 text-slate-600 px-2 md:px-3 py-1 rounded-full shadow-sm w-max">Consideration & Intent</span>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            <div>
+                                <p class="text-[10px] md:text-xs text-brand-600 font-bold mb-1 uppercase tracking-wider">Multi-Platform Story</p>
+                                <p class="text-slate-700 text-xs md:text-sm">Trust is built multi-channel. They binge a <strong class="text-slate-900">15-min YouTube documentary</strong> on a Ghost Kitchen's success. Later, a <strong class="text-slate-900">LinkedIn carousel</strong> breaks down the exact framework used. They see FireAI's <strong class="text-slate-900">Twitter build-in-public</strong> updates and subscribe to the newsletter.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] md:text-xs text-brand-600 font-bold mb-1 uppercase tracking-wider">Trigger & Metric</p>
+                                <p class="text-slate-700 text-xs md:text-sm">Email captured via newsletter link. They drop a comment on a YouTube video or IG post.<br><strong class="text-slate-900 mt-1 inline-block">Metric:</strong> Video watch time, multi-channel DM volume, newsletter subs.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- BOFU -->
+                    <div class="bg-white rounded-xl overflow-hidden border border-slate-200 shadow-sm">
+                        <div class="bg-slate-50 p-3 md:p-4 border-b border-slate-200 flex flex-col sm:flex-row sm:justify-between sm:items-center gap-2">
+                            <h4 class="font-bold text-slate-900 text-sm md:text-base">BOFU - BOTTOM OF FUNNEL</h4>
+                            <span class="text-[10px] md:text-xs font-bold bg-white border border-slate-200 text-slate-600 px-2 md:px-3 py-1 rounded-full shadow-sm w-max">Conversion & Loyalty</span>
+                        </div>
+                        <div class="p-4 md:p-6 grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+                            <div>
+                                <p class="text-[10px] md:text-xs text-brand-600 font-bold mb-1 uppercase tracking-wider">Multi-Platform Story</p>
+                                <p class="text-slate-700 text-xs md:text-sm">Friction is removed. A comment on an <strong class="text-slate-900">Instagram Reel</strong> or a <strong class="text-slate-900">LinkedIn DM</strong> triggers an automated Calendly link via ManyChat. A demo is booked via a <strong class="text-slate-900">YouTube CTA link</strong>, objections are handled, and the deal closes.</p>
+                            </div>
+                            <div>
+                                <p class="text-[10px] md:text-xs text-brand-600 font-bold mb-1 uppercase tracking-wider">Trigger & Metric</p>
+                                <p class="text-slate-700 text-xs md:text-sm">Demo booked. Proposal accepted. Customer onboarded.<br><strong class="text-slate-900 mt-1 inline-block">Metric:</strong> Demo bookings, closed won revenue attributed to multi-touch social.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KPI Metrics -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-4 mt-8 md:mt-12 pt-6 md:pt-8 border-t border-slate-200">
+                    <div class="text-center bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <div class="text-2xl md:text-4xl font-black text-slate-900 mb-1 md:mb-2">10K+</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-widest">Impressions / TOFU</div>
+                    </div>
+                    <div class="text-center bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <div class="text-2xl md:text-4xl font-black text-slate-900 mb-1 md:mb-2">500+</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-widest">Email subs (Day 30)</div>
+                    </div>
+                    <div class="text-center bg-brand-50 p-3 rounded-lg border border-brand-100">
+                        <div class="text-2xl md:text-4xl font-black text-brand-600 mb-1 md:mb-2">100+</div>
+                        <div class="text-[10px] md:text-sm text-brand-700 font-bold uppercase tracking-widest">Demo reqs / mo</div>
+                    </div>
+                    <div class="text-center bg-slate-50 p-3 rounded-lg border border-slate-100">
+                        <div class="text-2xl md:text-4xl font-black text-slate-900 mb-1 md:mb-2">3x</div>
+                        <div class="text-[10px] md:text-sm text-slate-500 font-bold uppercase tracking-widest">Warm conv. rate</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02A. LinkedIn Strategy -->
+            <section id="sec-02A" class="p-5 md:p-12 lg:p-24 border-b border-slate-200 bg-white">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">02A</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">LinkedIn Strategy</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-6 font-medium">The #1 B2B Lead Engine &middot; High-Conversion DM Funnel</p>
+                
+                <!-- Reality Check Banner -->
+                <blockquote class="border-l-4 border-[#0a66c2] pl-4 md:pl-6 mb-8 md:mb-12 text-sm md:text-lg text-slate-800 font-medium bg-[#0a66c2]/5 py-4 md:py-5 pr-4 md:pr-5 rounded-r-lg shadow-sm border border-[#0a66c2]/20">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-[#0a66c2] font-bold uppercase tracking-widest text-[10px] md:text-xs bg-white px-2 md:px-3 py-1 rounded shadow-sm border border-[#0a66c2]/20">Reality Check</span>
+                    </div>
+                    ~78% of B2B leads come from LinkedIn. You don't need viral content; you need decision-maker attention.
+                    <div class="text-xs md:text-sm text-slate-600 mt-2 md:mt-3 font-normal border-t border-[#0a66c2]/20 pt-2 md:pt-3">
+                        <strong class="text-slate-900">The 2026 Algorithm Favors:</strong> Expertise &middot; Conversations (Comments > Likes) &middot; Early engagement. <strong class="text-brand-600">2-5 posts/week is ideal.</strong>
+                    </div>
+                </blockquote>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">Top High-Performing Formats</h3>
+                        <div class="space-y-3 md:space-y-4">
+                            <!-- 1. Carousel Posts -->
+                            <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-xl border-l-4 border-l-brand-500 shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center justify-between mb-2 gap-2">
+                                    <h4 class="font-bold text-slate-900 text-sm md:text-base">📄 1. Carousel Posts</h4>
+                                    <span class="bg-brand-100 text-brand-700 text-[8px] md:text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-bold whitespace-nowrap">Top Performer</span>
+                                </div>
+                                <p class="text-xs md:text-sm text-brand-600 font-bold mb-1 md:mb-2 italic">Goal: Reach + Saves &rarr; Boosts Algorithm</p>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Examples: "Top 10 AI tools for business (2026)", "Step-by-step automation workflow"</p>
+                            </div>
+                            <!-- 2. Short Form Video -->
+                            <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-xl border-l-4 border-l-blue-500 shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center justify-between mb-2 gap-2">
+                                    <h4 class="font-bold text-slate-900 text-sm md:text-base">🎥 2. Short Form Video</h4>
+                                    <span class="bg-blue-50 text-blue-700 text-[8px] md:text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-bold whitespace-nowrap">Trust Builder</span>
+                                </div>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Builds trust 2x faster. Examples: "1 AI hack in 30 sec", Founder talking head.</p>
+                            </div>
+                            <!-- 3. Text Hook Posts -->
+                            <div class="bg-white border border-slate-200 p-4 md:p-5 rounded-xl border-l-4 border-l-red-500 shadow-sm hover:shadow-md transition">
+                                <div class="flex items-center justify-between mb-2 gap-2">
+                                    <h4 class="font-bold text-slate-900 text-sm md:text-base">🧵 3. Text Hook Posts</h4>
+                                    <span class="bg-red-50 text-red-700 text-[8px] md:text-[10px] px-2 py-1 rounded-full uppercase tracking-wider font-bold whitespace-nowrap">Viral Driver</span>
+                                </div>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Structure: Hook (First 2 lines) &rarr; Value &rarr; CTA.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Visual Mockup: LinkedIn Carousel -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-6 flex flex-col items-center justify-center shadow-inner relative w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 left-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Carousel Visual</div>
+                        
+                        <div class="w-full max-w-sm bg-white border border-slate-200 rounded-lg shadow-sm mt-6">
+                            <div class="p-3 md:p-4 border-b border-slate-100 flex items-center gap-3">
+                                <img src="https://fireai.in/icon512_maskable.png" alt="FireAI Logo" class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 shadow-sm flex-shrink-0">
+                                <div>
+                                    <div class="font-bold text-xs md:text-sm text-slate-900">Rehan Firoz Kadri</div>
+                                    <div class="text-[10px] md:text-xs text-slate-500">Growth Marketer &middot; FireAI</div>
+                                </div>
+                            </div>
+                            <div class="p-3 md:p-4">
+                                <p class="text-xs md:text-sm font-medium text-slate-800 mb-3">80% of D2C brands are losing money to bad data.<br><br>Here is the exact framework to fix it in 30 seconds. 👇</p>
+                                
+                                <!-- Carousel Preview Graphic -->
+                                <div class="aspect-[4/5] bg-gradient-to-br from-brand-50 to-orange-100 border border-brand-200 rounded-lg flex flex-col items-center justify-center text-center p-4 md:p-6 shadow-inner relative overflow-hidden">
+                                    <div class="absolute top-0 right-0 bg-brand-500 text-white text-[8px] md:text-[10px] font-bold px-2 py-1 rounded-bl-lg">1/10</div>
+                                    <div class="text-brand-600 font-black text-5xl md:text-6xl mb-2 md:mb-4 drop-shadow-sm">80%</div>
+                                    <div class="text-base md:text-lg font-bold text-slate-900 leading-tight">Of businesses<br>lose margin to<br>manual reporting.</div>
+                                    <div class="mt-4 md:mt-8 text-[10px] md:text-xs font-bold bg-white text-brand-600 px-3 md:px-4 py-1.5 md:py-2 rounded-full shadow-sm flex items-center gap-2">
+                                        Swipe for the fix <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-8 md:mb-12">
+                    <!-- DM Strategy -->
+                    <div>
+                        <div class="bg-brand-50 border border-brand-100 p-4 md:p-6 rounded-xl shadow-sm mb-6">
+                            <h4 class="font-bold text-brand-700 text-base md:text-lg mb-3 md:mb-4 flex items-center gap-2">
+                                <svg class="w-5 h-5 text-brand-600" fill="currentColor" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/></svg>
+                                Relationship-First DM Funnel
+                            </h4>
+                            <p class="text-xs md:text-sm text-slate-700 mb-4 font-medium">LinkedIn favors relationship-first selling. Never pitch in the first message. The goal is to move from comments to value, then naturally to a demo.</p>
+                            
+                            <div class="space-y-2 md:space-y-3">
+                                <div class="flex items-center gap-2 md:gap-3 text-xs md:text-sm">
+                                    <span class="bg-white border border-slate-200 text-slate-600 font-bold px-2 py-1 rounded shadow-sm">Step 1</span>
+                                    <span class="text-slate-800 font-medium">Content &rarr; Attraction</span>
+                                </div>
+                                <div class="flex items-center gap-2 md:gap-3 text-xs md:text-sm">
+                                    <span class="bg-white border border-slate-200 text-slate-600 font-bold px-2 py-1 rounded shadow-sm">Step 2</span>
+                                    <span class="text-slate-800 font-medium">Engagement &rarr; Relationship</span>
+                                </div>
+                                <div class="flex items-center gap-2 md:gap-3 text-xs md:text-sm">
+                                    <span class="bg-brand-500 text-white font-bold px-2 py-1 rounded shadow-sm">Step 3</span>
+                                    <span class="text-brand-700 font-bold">DM &rarr; Conversion</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Mockup: DM Chat -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-6 shadow-inner relative w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 left-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">DM Flow Visual</div>
+                        <div class="max-w-sm w-full mx-auto mt-6 bg-white rounded-xl shadow-md border border-slate-200 overflow-hidden">
+                            <div class="bg-[#0a66c2] p-2.5 md:p-3 text-white flex items-center gap-3">
+                                <div class="w-6 h-6 md:w-8 md:h-8 bg-white/20 rounded-full flex items-center justify-center font-bold text-xs md:text-sm">D2C</div>
+                                <div class="font-bold text-xs md:text-sm">Target Founder</div>
+                            </div>
+                            <div class="p-3 md:p-4 space-y-3 md:space-y-4 bg-slate-50">
+                                <!-- Left (Lead) -->
+                                <div class="flex gap-2">
+                                    <div class="w-5 h-5 md:w-6 md:h-6 bg-slate-300 rounded-full flex-shrink-0 flex items-center justify-center text-[6px] md:text-[8px] font-bold text-white mt-1">D2C</div>
+                                    <div class="bg-white border border-slate-200 p-2 rounded-lg rounded-tl-none text-[10px] md:text-xs text-slate-700 shadow-sm font-bold">
+                                        DEMO
+                                    </div>
+                                </div>
+                                <!-- Right (FireAI) -->
+                                <div class="flex gap-2 flex-row-reverse">
+                                    <img src="https://fireai.in/icon512_maskable.png" class="w-5 h-5 md:w-6 md:h-6 rounded-full flex-shrink-0 border border-slate-200 shadow-sm mt-1">
+                                    <div class="bg-[#0a66c2] text-white p-2 md:p-2.5 rounded-lg rounded-tr-none text-[10px] md:text-xs shadow-sm max-w-[85%]">
+                                        Hey! Thanks for commenting. Here's the 10 Metrics PDF you asked for: [Link]<br><br>Quick question - are you currently using Excel or a BI tool for these?
+                                    </div>
+                                </div>
+                                 <!-- Left (Lead) -->
+                                 <div class="flex gap-2">
+                                    <div class="w-5 h-5 md:w-6 md:h-6 bg-slate-300 rounded-full flex-shrink-0 flex items-center justify-center text-[6px] md:text-[8px] font-bold text-white mt-1">D2C</div>
+                                    <div class="bg-white border border-slate-200 p-2 md:p-2.5 rounded-lg rounded-tl-none text-[10px] md:text-xs text-slate-700 shadow-sm font-medium max-w-[85%]">
+                                        Mostly Excel right now. It takes my team forever to pull weekly reports.
+                                    </div>
+                                </div>
+                                <!-- Right (FireAI) -->
+                                <div class="flex gap-2 flex-row-reverse">
+                                    <img src="https://fireai.in/icon512_maskable.png" class="w-5 h-5 md:w-6 md:h-6 rounded-full flex-shrink-0 border border-slate-200 shadow-sm mt-1">
+                                    <div class="bg-[#0a66c2] text-white p-2 md:p-2.5 rounded-lg rounded-tr-none text-[10px] md:text-xs shadow-sm font-medium max-w-[85%]">
+                                        Thought so! Would a 15-min data audit be useful? We can show you how to automate that instantly.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 bg-slate-50 p-6 rounded-xl border border-slate-200">
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center border border-slate-100">
+                        <div class="text-2xl font-black text-slate-900">5x</div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1">Posts per week</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center border border-slate-100">
+                        <div class="text-2xl font-black text-slate-900">100+</div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1">Target Demo req/mo</div>
+                    </div>
+                    <div class="bg-brand-50 p-4 rounded-lg shadow-sm text-center border border-brand-100">
+                        <div class="text-2xl font-black text-brand-600">#1</div>
+                        <div class="text-xs text-brand-700 font-bold uppercase tracking-widest mt-1">Focus: Founder Brand</div>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg shadow-sm text-center border border-slate-100">
+                        <div class="text-2xl font-black text-slate-900">40%+</div>
+                        <div class="text-xs text-slate-500 font-bold uppercase tracking-widest mt-1">Connection accept rate</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02B. Twitter / X Strategy -->
+            <section id="sec-02B" class="p-5 md:p-12 lg:p-24 border-b border-slate-200 bg-slate-50/30">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">02B</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Twitter / X Strategy</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-6 font-medium">Attention + Speed + Distribution &middot; Niche Domination</p>
+                
+                <blockquote class="border-l-4 border-slate-800 pl-4 md:pl-6 mb-8 md:mb-12 text-sm md:text-lg text-slate-800 font-medium bg-white py-4 md:py-5 pr-4 md:pr-5 rounded-r-lg shadow-sm border-t border-r border-b border-slate-200">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-slate-800 font-bold uppercase tracking-widest text-[10px] md:text-xs bg-slate-100 px-2 md:px-3 py-1 rounded shadow-sm border border-slate-200">Reality Check</span>
+                    </div>
+                    Twitter is NOT like LinkedIn. LinkedIn is for Authority (slow, high-quality). X is for <strong class="text-slate-900">Attention + Speed + Distribution</strong>. 
+                </blockquote>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">The 3-Pillar System</h3>
+                        <div class="space-y-4 md:space-y-6">
+                            <div class="bg-white p-4 md:p-5 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-sm">
+                                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-1 flex items-center justify-between">
+                                    1. Viral Threads 
+                                    <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-brand-600 bg-brand-50 px-2 py-1 rounded">The Engine</span>
+                                </h4>
+                                <p class="text-xs md:text-sm text-slate-600 mb-2 md:mb-3 font-medium">Algorithm heavily favors long-form engagement (shares/bookmarks). Example: "10 AI tools that replace employees"</p>
+                            </div>
+                            <div class="bg-white p-4 md:p-5 rounded-xl border border-slate-200 border-l-4 border-l-blue-500 shadow-sm">
+                                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-1 flex items-center justify-between">
+                                    2. Short Value Tweets
+                                    <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-blue-600 bg-blue-50 px-2 py-1 rounded">Visibility</span>
+                                </h4>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Post 3-5 times daily to stay in feeds. Example: "If you're not using AI in 2026, you're behind."</p>
+                            </div>
+                            <div class="bg-white p-4 md:p-5 rounded-xl border border-slate-200 border-l-4 border-l-purple-500 shadow-sm">
+                                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-1 flex items-center justify-between">
+                                    3. Reply Strategy
+                                    <span class="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-purple-600 bg-purple-50 px-2 py-1 rounded">Secret Weapon</span>
+                                </h4>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Reply to 20-30 tweets daily from AI founders and SaaS creators. Drives massive profile views.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Visual Mockup: Twitter Thread -->
+                    <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 md:p-6 shadow-inner relative w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 left-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Thread Visual</div>
+                        
+                        <div class="mt-6 md:mt-8 space-y-0 relative max-w-sm mx-auto">
+                            <!-- Vertical connector line -->
+                            <div class="absolute top-8 md:top-10 bottom-10 left-4 md:left-5 w-0.5 bg-slate-300"></div>
+                            
+                            <!-- Tweet 1 -->
+                            <div class="bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-200 relative z-10 mb-4">
+                                <div class="flex gap-2 md:gap-3">
+                                    <img src="https://fireai.in/icon512_maskable.png" alt="FireAI Logo" class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 flex-shrink-0 shadow-sm">
+                                    <div>
+                                        <div class="flex items-center gap-1 md:gap-2 mb-1">
+                                            <span class="font-bold text-xs md:text-sm text-slate-900">FireAI</span>
+                                            <span class="text-[10px] md:text-xs text-slate-500">@fireaiglobal &middot; 2h</span>
+                                        </div>
+                                        <p class="text-xs md:text-sm text-slate-800 mb-2 md:mb-3 font-medium">AI is replacing entire teams.<br><br>Here are 10 tools businesses are using right now to automate reporting 👇</p>
+                                        <div class="flex gap-3 md:gap-6 text-slate-400 text-[10px] md:text-xs">
+                                            <div class="flex items-center gap-1"><svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg> 24</div>
+                                            <div class="flex items-center gap-1"><svg class="w-3 h-3 md:w-4 md:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> 89</div>
+                                            <div class="flex items-center gap-1 text-red-500"><svg class="w-3 h-3 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg> 412</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Tweet 2 -->
+                            <div class="bg-white p-3 md:p-4 rounded-xl shadow-sm border border-slate-200 relative z-10">
+                                <div class="flex gap-2 md:gap-3">
+                                    <img src="https://fireai.in/icon512_maskable.png" alt="FireAI Logo" class="w-8 h-8 md:w-10 md:h-10 rounded-full border border-slate-200 flex-shrink-0 shadow-sm opacity-50">
+                                    <div>
+                                        <div class="flex items-center gap-1 md:gap-2 mb-1">
+                                            <span class="font-bold text-xs md:text-sm text-slate-900">FireAI</span>
+                                            <span class="text-[10px] md:text-xs text-slate-500">@fireaiglobal &middot; 2h</span>
+                                        </div>
+                                        <p class="text-xs md:text-sm text-slate-800 font-medium">1. FireAI - Decision Intelligence<br><br>Stop waiting 3 days for a spreadsheet. Ask questions to your database via mobile app and get instant charts.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">Advanced Growth Hacks</h3>
+                        <div class="space-y-3 md:space-y-4">
+                            <div class="bg-white border border-slate-200 shadow-sm p-4 md:p-5 rounded-xl hover:shadow-md transition">
+                                <h4 class="font-bold text-slate-900 text-sm md:text-base mb-1">1. Creator Piggybacking</h4>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Steal attention by replying early under massive AI creators and viral threads.</p>
+                            </div>
+                            <div class="bg-white border border-slate-200 shadow-sm p-4 md:p-5 rounded-xl hover:shadow-md transition">
+                                <h4 class="font-bold text-slate-900 text-sm md:text-base mb-1">2. Hook Engineering</h4>
+                                <p class="text-[10px] md:text-xs text-green-600 font-bold">✅ GOOD: "These AI tools are replacing entire teams"</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Visual Mockup: Reply Game -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-6 shadow-inner relative w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 left-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Reply Strategy Visual</div>
+                        <div class="max-w-md w-full mx-auto mt-6 md:mt-8 bg-white border border-slate-200 p-3 md:p-4 rounded-xl shadow-md">
+                            <!-- Original Tweet -->
+                            <div class="flex gap-2 md:gap-3 mb-3 md:mb-4">
+                                <div class="w-8 h-8 md:w-10 md:h-10 bg-slate-800 rounded-full flex items-center justify-center text-white text-[8px] md:text-xs font-bold shadow-sm flex-shrink-0">SAAS</div>
+                                <div>
+                                    <div class="font-bold text-xs md:text-sm text-slate-900">Big SaaS Founder <span class="text-slate-500 font-normal text-[10px] md:text-xs">@saasfounder</span></div>
+                                    <p class="text-xs md:text-sm text-slate-800 mt-1 font-medium">What's the biggest bottleneck in your business right now?</p>
+                                </div>
+                            </div>
+                            <!-- Reply -->
+                            <div class="flex gap-2 md:gap-3 pl-4 md:pl-8 relative">
+                                <div class="absolute left-4 md:left-8 top-0 bottom-full w-0.5 bg-slate-200 -mt-3 md:-mt-4 mb-2"></div>
+                                <img src="https://fireai.in/icon512_maskable.png" class="w-6 h-6 md:w-8 md:h-8 rounded-full border border-slate-200 z-10 bg-white shadow-sm flex-shrink-0">
+                                <div class="flex-1 border border-brand-200 bg-brand-50/50 p-2 md:p-3 rounded-lg shadow-sm">
+                                    <div class="font-bold text-xs md:text-sm text-slate-900 mb-1">FireAI <span class="text-slate-500 font-normal text-[10px] md:text-xs">@fireaiglobal</span></div>
+                                    <p class="text-[10px] md:text-sm text-slate-800 font-medium">For most D2C brands we talk to, it's waiting 3 days for their data analyst to build a custom Excel report.<br><br>Instant data = instant decisions.</p>
+                                    <div class="mt-2 md:mt-3 text-[10px] md:text-xs text-brand-600 font-bold flex gap-3 md:gap-4">
+                                        <span>💬 12</span> <span>🔁 4</span> <span>❤️ 148</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Algorithm Game Banner -->
+                <div class="bg-white border border-slate-200 p-4 md:p-6 rounded-xl shadow-sm mb-8 md:mb-12">
+                    <h4 class="font-bold text-slate-900 text-base md:text-lg mb-3 md:mb-4 flex items-center gap-2">
+                        ⚙️ X Algorithm Game
+                    </h4>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-4">
+                        <div class="bg-green-50 p-3 md:p-4 rounded-lg border border-green-100">
+                            <p class="text-[10px] md:text-xs font-bold text-green-600 uppercase tracking-wider mb-2">🚀 Growth Signals</p>
+                            <ul class="text-xs md:text-sm font-medium text-slate-700 space-y-1">
+                                <li>Replies & Bookmarks > Likes</li>
+                                <li>Shares (Retweets)</li>
+                            </ul>
+                        </div>
+                        <div class="bg-red-50 p-3 md:p-4 rounded-lg border border-red-100">
+                            <p class="text-[10px] md:text-xs font-bold text-red-600 uppercase tracking-wider mb-2">❌ Kills Growth</p>
+                            <ul class="text-xs md:text-sm font-medium text-slate-700 space-y-1">
+                                <li>Links in main tweets</li>
+                                <li>Zero replies / broadcast only</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02C. Instagram Strategy -->
+            <section id="sec-02C" class="p-5 md:p-12 lg:p-24 border-b border-slate-200 bg-white">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">02C</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Instagram Strategy</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-6 md:mb-8 font-medium">Awareness + Trust &middot; Reels-First &middot; Visual Proof</p>
+
+                <!-- Reality Check Banner -->
+                <blockquote class="border-l-4 border-pink-500 pl-4 md:pl-6 mb-8 md:mb-12 text-sm md:text-lg text-slate-800 font-medium bg-white py-4 md:py-5 pr-4 md:pr-5 rounded-r-lg shadow-sm border-t border-r border-b border-slate-200">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-pink-600 font-bold uppercase tracking-widest text-[10px] md:text-xs bg-pink-50 px-2 md:px-3 py-1 rounded shadow-sm border border-pink-100">Reality Check</span>
+                    </div>
+                    Instagram is <strong class="text-red-500">NOT</strong> for direct sales in B2B. It's a high-attention channel to attract founders through visual proof and problem-focused storytelling.
+                </blockquote>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+                    <!-- Left: Strategy details -->
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">The 4 Content Pillars</h3>
+                        <div class="space-y-3 md:space-y-4">
+                            <div class="bg-white p-3 md:p-4 rounded-xl border border-slate-200 border-l-4 border-l-red-500 shadow-sm flex flex-wrap items-center justify-between gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm md:text-base">1. Pain-Point Content</h4>
+                                    <p class="text-[10px] md:text-xs text-slate-500 font-medium">"Your business is losing money..."</p>
+                                </div>
+                                <span class="bg-red-50 text-red-600 text-[8px] md:text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Attention</span>
+                            </div>
+                            <div class="bg-white p-3 md:p-4 rounded-xl border border-slate-200 border-l-4 border-l-blue-500 shadow-sm flex flex-wrap items-center justify-between gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm md:text-base">2. Data / Stats</h4>
+                                    <p class="text-[10px] md:text-xs text-slate-500 font-medium">Clean carousels with bold numbers.</p>
+                                </div>
+                                <span class="bg-blue-50 text-blue-600 text-[8px] md:text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Saves</span>
+                            </div>
+                            <div class="bg-white p-3 md:p-4 rounded-xl border border-slate-200 border-l-4 border-l-brand-500 shadow-sm flex flex-wrap items-center justify-between gap-2">
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-sm md:text-base">3. Reels (80% Focus)</h4>
+                                    <p class="text-[10px] md:text-xs text-slate-500 font-medium">"Stop doing reports like this"</p>
+                                </div>
+                                <span class="bg-brand-50 text-brand-600 text-[8px] md:text-[10px] font-bold uppercase tracking-wider px-2 py-1 rounded">Growth</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Visual Mockup for IG Reel -->
+                    <div class="bg-slate-100 border border-slate-200 rounded-xl p-4 md:p-6 flex flex-col items-center justify-center shadow-inner relative w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 right-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Reel Visual</div>
+                        
+                        <div class="w-[200px] md:w-[240px] aspect-[9/16] bg-slate-900 rounded-2xl overflow-hidden relative shadow-lg border-4 border-slate-800 mt-6 md:mt-4 group">
+                            <!-- Video Background / Overlay -->
+                            <div class="absolute inset-0 bg-gradient-to-br from-brand-600 to-red-600 opacity-90 flex flex-col items-center justify-center p-3 md:p-4 text-center">
+                                 <span class="text-white font-black text-xl md:text-2xl drop-shadow-md tracking-tight leading-tight">EXCEL IS<br>KILLING<br>YOUR<br>MARGINS.</span>
+                            </div>
+                            
+                            <!-- Engagement Icons (Right) -->
+                            <div class="absolute right-2 bottom-16 md:bottom-20 flex flex-col gap-3 md:gap-4 text-white items-center">
+                                <div class="flex flex-col items-center gap-1">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+                                    <span class="text-[8px] md:text-[10px] font-medium drop-shadow-md">1.2K</span>
+                                </div>
+                                <div class="flex flex-col items-center gap-1">
+                                    <svg class="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path></svg>
+                                    <span class="text-[8px] md:text-[10px] font-medium drop-shadow-md">48</span>
+                                </div>
+                            </div>
+                            
+                            <!-- Bottom Info overlay -->
+                            <div class="absolute bottom-0 inset-x-0 p-2 md:p-3 bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                                <div class="flex items-center gap-2 mb-1">
+                                    <img src="https://fireai.in/icon512_maskable.png" alt="FireAI Logo" class="w-5 h-5 md:w-6 md:h-6 rounded-full border border-white/50 shadow-sm">
+                                    <span class="text-white text-[10px] md:text-xs font-bold drop-shadow-md">fireai.in</span>
+                                </div>
+                                <p class="text-white/90 text-[8px] md:text-[10px] font-medium line-clamp-2">Stop manual reporting. Switch to AI decision intelligence... <span class="font-bold text-white">more</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16">
+                    <!-- Visual Mockup: IG Grid Layout -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-6 shadow-inner relative flex flex-col items-center w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 left-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Profile Grid Visual</div>
+                        <div class="w-full max-w-[240px] md:max-w-[280px] mt-6 md:mt-6 bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md">
+                            <div class="p-3 md:p-4 border-b border-slate-100 flex items-center gap-3 md:gap-4">
+                                <img src="https://fireai.in/icon512_maskable.png" class="w-10 h-10 md:w-14 md:h-14 rounded-full border border-slate-200 shadow-sm">
+                                <div>
+                                    <div class="font-bold text-xs md:text-sm text-slate-900">fireai.in</div>
+                                    <div class="text-[8px] md:text-[10px] text-slate-500">Business Intelligence App</div>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-0.5 bg-white border-t border-slate-100">
+                                <div class="aspect-square bg-gradient-to-br from-red-400 to-red-600 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-white text-center p-1 shadow-inner">Pain<br>Reel</div>
+                                <div class="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-brand-600 text-center p-1 shadow-inner border border-slate-200/50">Data<br>Carousel</div>
+                                <div class="aspect-square bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-white text-center p-1 shadow-inner">Live<br>Demo</div>
+                                
+                                <div class="aspect-square bg-gradient-to-br from-purple-400 to-purple-600 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-white text-center p-1 shadow-inner">Edu<br>Reel</div>
+                                <div class="aspect-square bg-gradient-to-br from-brand-400 to-brand-600 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-white text-center p-1 shadow-inner">Pain<br>Reel</div>
+                                <div class="aspect-square bg-gradient-to-br from-slate-100 to-slate-200 flex items-center justify-center text-[8px] md:text-[10px] font-bold text-brand-600 text-center p-1 shadow-inner border border-slate-200/50">Founder<br>Quote</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">Advanced Strategy</h3>
+                        <div class="space-y-3 md:space-y-4">
+                            <div class="bg-white border border-slate-200 shadow-sm p-4 md:p-5 rounded-xl hover:shadow-md transition">
+                                <h4 class="font-bold text-slate-900 text-sm md:text-base mb-1 md:mb-2">1. "Edutainment" Style</h4>
+                                <p class="text-[10px] md:text-xs text-red-600 font-bold mb-1">❌ "AI improves efficiency"</p>
+                                <p class="text-[10px] md:text-xs text-green-600 font-bold">✅ "You're losing money every day (here's why)"</p>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4">
+                                <div class="bg-white border border-slate-200 shadow-sm p-3 md:p-4 rounded-xl hover:shadow-md transition">
+                                    <h4 class="font-bold text-slate-900 text-xs md:text-sm mb-1">2. Founder Brand</h4>
+                                    <p class="text-[10px] md:text-xs font-medium text-slate-700">Talking reels, strong opinions. Trust people, not logos.</p>
+                                </div>
+                                <div class="bg-white border border-slate-200 shadow-sm p-3 md:p-4 rounded-xl hover:shadow-md transition">
+                                    <h4 class="font-bold text-slate-900 text-xs md:text-sm mb-1">3. Comment Game</h4>
+                                    <p class="text-[10px] md:text-xs font-medium text-slate-700">Comment daily on AI & startup content for free reach.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 02D. YouTube Strategy -->
+            <section id="sec-02D" class="p-5 md:p-12 lg:p-24 border-b border-slate-200 bg-white">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">02D</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">YouTube Strategy</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-6 font-medium">Authority Engine &middot; High-Intent Lead Generation</p>
+                
+                <!-- Differentiation Banner -->
+                <blockquote class="border-l-4 border-red-600 pl-4 md:pl-6 mb-8 md:mb-12 text-sm md:text-lg text-slate-800 font-medium bg-red-50/50 py-4 md:py-5 pr-4 md:pr-5 rounded-r-lg shadow-sm border border-red-100">
+                    <div class="flex items-center gap-2 mb-2">
+                        <span class="text-red-700 font-bold uppercase tracking-widest text-[10px] md:text-xs bg-white px-2 md:px-3 py-1 rounded shadow-sm border border-red-100">Differentiation Strategy</span>
+                    </div>
+                    Most AI channels talk theory. <strong class="text-slate-900">YOU win by showing reality.</strong>
+                    <div class="text-xs md:text-sm text-slate-600 mt-2 md:mt-3 font-normal border-t border-red-200 pt-2 md:pt-3 flex flex-wrap gap-3 md:gap-4">
+                        <span class="flex items-center gap-1"><span class="text-green-500">✅</span> Real business problems</span>
+                        <span class="flex items-center gap-1"><span class="text-green-500">✅</span> Real dashboards</span>
+                    </div>
+                </blockquote>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-start mb-12 md:mb-16">
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">The 3 Content Pillars</h3>
+                        <div class="space-y-4 md:space-y-6">
+                            <!-- Pillar 1 -->
+                            <div class="bg-white p-4 md:p-5 rounded-xl border border-slate-200 border-l-4 border-l-red-500 shadow-sm flex flex-col">
+                                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-1 flex items-center gap-2">🎯 1. Problem &rarr; Solution</h4>
+                                <p class="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-red-600 mb-1 md:mb-2">The Main Engine (Lead Gen)</p>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">Start with pain &rarr; Show chaos &rarr; Introduce FireAI. Example: "Why your margins are dropping."</p>
+                            </div>
+                            <!-- Pillar 2 -->
+                            <div class="bg-white p-4 md:p-5 rounded-xl border border-slate-200 border-l-4 border-l-blue-500 shadow-sm flex flex-col">
+                                <h4 class="font-bold text-slate-900 text-base md:text-lg mb-1 flex items-center gap-2">🧠 2. Educational Content</h4>
+                                <p class="text-[8px] md:text-[10px] font-bold uppercase tracking-wider text-blue-600 mb-1 md:mb-2">The Traffic Engine</p>
+                                <p class="text-xs md:text-sm text-slate-600 font-medium">High search demand topics. Example: "Top 10 AI tools for business in 2026."</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Visual Mockups: YT Thumbnail & Shorts -->
+                    <div class="bg-slate-50 border border-slate-200 rounded-xl p-4 md:p-6 shadow-inner relative flex flex-col items-center justify-center w-full overflow-hidden">
+                        <div class="absolute top-2 md:top-4 left-4 text-[10px] md:text-xs font-bold text-slate-400 uppercase tracking-widest">Video Formats</div>
+                        
+                        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 md:gap-6 mt-6 md:mt-4 w-full">
+                            <!-- Long Form Thumbnail Mockup -->
+                            <div class="w-full sm:w-[240px] md:w-[280px] max-w-[280px] bg-white border border-slate-200 rounded-xl overflow-hidden shadow-md transition hover:shadow-lg flex-shrink-0">
+                                <div class="aspect-video bg-slate-800 relative group overflow-hidden">
+                                    <div class="absolute inset-0 bg-gradient-to-tr from-slate-900 via-slate-800 to-brand-900"></div>
+                                    <div class="absolute right-2 top-2 bottom-2 w-1/2 bg-white/5 rounded border border-white/10 flex flex-col p-2 gap-1">
+                                        <div class="h-2 w-1/3 bg-brand-500/80 rounded"></div>
+                                        <div class="flex-1 flex items-end gap-1 pt-2">
+                                            <div class="w-1/3 h-1/3 bg-white/20 rounded-t"></div>
+                                            <div class="w-1/3 h-full bg-green-500/80 rounded-t"></div>
+                                            <div class="w-1/3 h-1/2 bg-white/20 rounded-t"></div>
+                                        </div>
+                                    </div>
+                                    <div class="absolute bottom-2 left-2 z-10 drop-shadow-md">
+                                        <span class="bg-brand-500 text-white font-black text-[8px] md:text-xs px-1.5 py-0.5 uppercase block w-max -skew-x-3 border border-brand-600">STOP GUESSING.</span>
+                                        <span class="bg-white text-slate-900 font-black text-[8px] md:text-xs px-1.5 py-0.5 uppercase block w-max -skew-x-3 mt-0.5 border border-slate-200">START KNOWING.</span>
+                                    </div>
+                                </div>
+                                <div class="p-2 md:p-3 flex gap-2">
+                                    <img src="https://fireai.in/icon512_maskable.png" class="w-6 h-6 md:w-8 md:h-8 rounded-full border border-slate-200 flex-shrink-0">
+                                    <div>
+                                        <h4 class="font-bold text-slate-900 text-[8px] md:text-[10px] leading-tight mb-0.5 md:mb-1">Stop Margin Leakage with AI</h4>
+                                        <p class="text-[7px] md:text-[9px] text-slate-500 font-medium">FireAI &middot; 12K views</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Shorts Mockup -->
+                            <div class="w-[100px] md:w-[140px] aspect-[9/16] bg-slate-900 rounded-xl overflow-hidden relative shadow-md border-4 border-slate-800 flex-shrink-0 hidden sm:block">
+                                <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-800/80 to-slate-900 flex flex-col justify-end p-2 md:p-3 text-center pb-6 md:pb-8">
+                                     <span class="bg-red-600 text-white font-black text-[8px] md:text-[10px] px-1 md:px-2 py-0.5 md:py-1 uppercase rounded-sm self-start mb-1 shadow-sm">1 Hack</span>
+                                     <p class="text-white text-[9px] md:text-[11px] font-bold text-left leading-tight drop-shadow-md">Fix your Excel reports in 30s 🤯</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mb-12">
+                    <div class="bg-white border border-slate-200 p-5 md:p-6 rounded-xl shadow-sm">
+                        <h4 class="font-bold text-slate-900 text-base md:text-lg mb-3 md:mb-4 flex items-center gap-2">
+                            🔥 The Hook Formula
+                        </h4>
+                        <div class="space-y-3">
+                            <div class="bg-red-50 border border-red-100 p-3 rounded-lg">
+                                <span class="text-[10px] md:text-xs font-bold text-red-600 uppercase tracking-wider block mb-1">❌ Bad Hook:</span>
+                                <p class="text-xs md:text-sm text-slate-700 font-medium">"Today we will talk about BI tools"</p>
+                            </div>
+                            <div class="bg-green-50 border border-green-100 p-3 rounded-lg">
+                                <span class="text-[10px] md:text-xs font-bold text-green-600 uppercase tracking-wider block mb-1">✅ Good Hook:</span>
+                                <p class="text-xs md:text-sm text-slate-900 font-bold">"You're losing money every day because of bad data."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lead Funnel -->
+                    <div class="bg-brand-50 border border-brand-200 rounded-xl p-5 md:p-6 shadow-sm flex flex-col justify-center">
+                        <h4 class="font-bold text-brand-700 text-base md:text-lg mb-4 text-center">🎯 CTA Strategy</h4>
+                        <div class="flex items-center justify-center gap-2 mb-4">
+                            <div class="bg-white px-2 py-1 md:p-2 rounded border border-brand-100 text-center text-[10px] md:text-sm font-bold text-slate-700 shadow-sm">1. Video</div>
+                            <div class="text-brand-400">&rarr;</div>
+                            <div class="bg-white px-2 py-1 md:p-2 rounded border border-brand-100 text-center text-[10px] md:text-sm font-bold text-slate-700 shadow-sm">2. Interest</div>
+                            <div class="text-brand-400">&rarr;</div>
+                            <div class="bg-brand-500 px-2 py-1 md:p-2 rounded border border-brand-600 text-center text-[10px] md:text-sm font-bold text-white shadow-sm">3. CTA</div>
+                        </div>
+                        <div class="bg-white p-3 md:p-4 rounded-lg border border-slate-200 text-center shadow-sm mt-2">
+                            <p class="text-[10px] md:text-xs text-slate-500 font-bold uppercase tracking-wider mb-1 md:mb-2">In Every Video Say:</p>
+                            <p class="text-xs md:text-sm font-bold text-slate-900">"Get a free demo of FireAI — link in description"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 03. Repurposing System -->
+            <section id="sec-03" class="p-5 md:p-12 lg:p-24 border-b border-slate-200">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">03</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Content Repurposing System</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-6 font-medium">1 idea &rarr; 15 content pieces &middot; Platform-wise adaptation &middot; Scaling workflow</p>
+                
+                <div class="bg-white border border-brand-200 shadow-sm p-5 md:p-8 rounded-xl mb-8 md:mb-12 text-center relative overflow-hidden">
+                    <div class="absolute inset-0 bg-brand-50/50 pointer-events-none"></div>
+                    <h3 class="text-brand-600 font-bold uppercase tracking-widest text-[10px] md:text-sm mb-2 md:mb-4 relative z-10">The One-Idea Multiplier</h3>
+                    <div class="text-xl md:text-3xl font-black text-slate-900 relative z-10">
+                        1 Customer Conversation <br class="md:hidden"> <span class="text-brand-500">=</span> 15 Content Pieces
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-600 font-medium mt-3 md:mt-6 max-w-3xl mx-auto relative z-10">
+                        Record Ghost Kitchen interview &rarr; 1 YouTube doc + 5 Shorts + 1 LinkedIn carousel + 2 LinkedIn posts + 1 Twitter thread + 3 Instagram Reels + 1 WhatsApp broadcast.
+                    </p>
+                </div>
+
+                <div class="overflow-x-auto shadow-sm border border-slate-200 rounded-xl w-full">
+                    <table class="w-full text-left border-collapse bg-white min-w-[600px]">
+                        <thead>
+                            <tr class="bg-slate-50 text-[10px] md:text-xs uppercase tracking-wider text-slate-500 border-b border-slate-200">
+                                <th class="p-3 md:p-4 font-bold">Step</th>
+                                <th class="p-3 md:p-4 font-bold">Output</th>
+                                <th class="p-3 md:p-4 font-bold">Time</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-xs md:text-sm text-slate-700 divide-y divide-slate-100 font-medium">
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900"><span class="bg-brand-100 text-brand-700 px-1.5 py-0.5 md:px-2 md:py-1 rounded font-black mr-2">1</span>RECORD</td>
+                                <td class="p-3 md:p-4">Raw footage (Customer interview/product demo)</td>
+                                <td class="p-3 md:p-4 whitespace-nowrap">30-45 min</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900"><span class="bg-brand-100 text-brand-700 px-1.5 py-0.5 md:px-2 md:py-1 rounded font-black mr-2">2</span>EXTRACT</td>
+                                <td class="p-3 md:p-4">Pull 5 key insights/moments</td>
+                                <td class="p-3 md:p-4 whitespace-nowrap">20 min</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900"><span class="bg-brand-100 text-brand-700 px-1.5 py-0.5 md:px-2 md:py-1 rounded font-black mr-2">3</span>LONG FORM</td>
+                                <td class="p-3 md:p-4">1 full YouTube video (8-15 min)</td>
+                                <td class="p-3 md:p-4 whitespace-nowrap">2-3 hrs</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900"><span class="bg-brand-100 text-brand-700 px-1.5 py-0.5 md:px-2 md:py-1 rounded font-black mr-2">4</span>SHORTS</td>
+                                <td class="p-3 md:p-4">Cut 5 best moments into Shorts / Reels</td>
+                                <td class="p-3 md:p-4 whitespace-nowrap">1 hr</td>
+                            </tr>
+                            <tr class="table-row-hover transition-colors">
+                                <td class="p-3 md:p-4 font-bold text-slate-900"><span class="bg-brand-100 text-brand-700 px-1.5 py-0.5 md:px-2 md:py-1 rounded font-black mr-2">5</span>CAROUSEL</td>
+                                <td class="p-3 md:p-4">Convert top insight into 1 carousel</td>
+                                <td class="p-3 md:p-4 whitespace-nowrap">45 min</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- 06. Execution Plan -->
+            <section id="sec-06" class="p-5 md:p-12 lg:p-24 border-b border-slate-200">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-100">06</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Execution Plan</h2>
+                </div>
+                <p class="text-lg md:text-xl text-slate-500 mb-6 md:mb-8 font-medium">Weekly multi-platform orchestration</p>
+
+                <h3 class="text-lg md:text-xl font-bold text-slate-900 mb-4 md:mb-6">Weekly Schedule (Mon - Fri)</h3>
+                <div class="space-y-3 md:space-y-4 mb-12 w-full overflow-x-hidden">
+                    
+                    <!-- Monday -->
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden flex flex-col md:flex-row w-full">
+                        <div class="bg-slate-50 border-b md:border-r md:border-b-0 border-slate-200 p-3 md:p-4 md:w-28 flex justify-center items-center">
+                            <span class="text-lg md:text-xl font-black text-slate-900 tracking-wider">MON</span>
+                        </div>
+                        <div class="p-3 md:p-4 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                            <div class="bg-blue-50/50 border border-blue-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-blue-600 uppercase tracking-wider block mb-1">LinkedIn</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Publish AI Insights Carousel</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-slate-700 uppercase tracking-wider block mb-1">Twitter / X</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Post Viral Thread</p>
+                            </div>
+                            <div class="bg-pink-50/50 border border-pink-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-pink-600 uppercase tracking-wider block mb-1">Instagram</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Educational Reel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tuesday -->
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden flex flex-col md:flex-row w-full">
+                        <div class="bg-slate-50 border-b md:border-r md:border-b-0 border-slate-200 p-3 md:p-4 md:w-28 flex justify-center items-center">
+                            <span class="text-lg md:text-xl font-black text-slate-900 tracking-wider">TUE</span>
+                        </div>
+                        <div class="p-3 md:p-4 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                            <div class="bg-blue-50/50 border border-blue-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-blue-600 uppercase tracking-wider block mb-1">LinkedIn</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Text Hook Post</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-slate-700 uppercase tracking-wider block mb-1">Twitter / X</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Short Value Tweets</p>
+                            </div>
+                            <div class="bg-red-50/50 border border-red-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-red-600 uppercase tracking-wider block mb-1">YouTube</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Publish 'Data Diaries'</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Wednesday -->
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden flex flex-col md:flex-row w-full">
+                        <div class="bg-slate-50 border-b md:border-r md:border-b-0 border-slate-200 p-3 md:p-4 md:w-28 flex justify-center items-center">
+                            <span class="text-lg md:text-xl font-black text-slate-900 tracking-wider">WED</span>
+                        </div>
+                        <div class="p-3 md:p-4 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                            <div class="bg-blue-50/50 border border-blue-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-blue-600 uppercase tracking-wider block mb-1">LinkedIn</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Short Form Video</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-slate-700 uppercase tracking-wider block mb-1">Twitter / X</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Post High-Impact Thread</p>
+                            </div>
+                            <div class="bg-pink-50/50 border border-pink-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-pink-600 uppercase tracking-wider block mb-1">Instagram</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Social Proof Reel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Thursday -->
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden flex flex-col md:flex-row w-full">
+                        <div class="bg-slate-50 border-b md:border-r md:border-b-0 border-slate-200 p-3 md:p-4 md:w-28 flex justify-center items-center">
+                            <span class="text-lg md:text-xl font-black text-slate-900 tracking-wider">THU</span>
+                        </div>
+                        <div class="p-3 md:p-4 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                            <div class="bg-blue-50/50 border border-blue-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-blue-600 uppercase tracking-wider block mb-1">LinkedIn</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Proof / Case Study</p>
+                            </div>
+                            <div class="bg-red-50/50 border border-red-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-red-600 uppercase tracking-wider block mb-1">YouTube</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Publish 'Founder Q&A'</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-slate-700 uppercase tracking-wider block mb-1">Twitter / X</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Host #AskYourData Chat</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Friday -->
+                    <div class="bg-white border border-slate-200 shadow-sm rounded-xl overflow-hidden flex flex-col md:flex-row w-full">
+                        <div class="bg-slate-50 border-b md:border-r md:border-b-0 border-slate-200 p-3 md:p-4 md:w-28 flex justify-center items-center">
+                            <span class="text-lg md:text-xl font-black text-slate-900 tracking-wider">FRI</span>
+                        </div>
+                        <div class="p-3 md:p-4 flex-1 grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4">
+                            <div class="bg-blue-50/50 border border-blue-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-blue-600 uppercase tracking-wider block mb-1">LinkedIn</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Top 10 Stats Post</p>
+                            </div>
+                            <div class="bg-slate-50 border border-slate-200 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-slate-700 uppercase tracking-wider block mb-1">Twitter / X</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Post Data/Stats Thread</p>
+                            </div>
+                            <div class="bg-pink-50/50 border border-pink-100 rounded-lg p-2.5 md:p-3">
+                                <span class="text-[8px] md:text-[10px] font-bold text-pink-600 uppercase tracking-wider block mb-1">Instagram</span>
+                                <p class="text-xs md:text-sm font-medium text-slate-800">Behind the Scenes Reel</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- 08. Why Hire I -->
+            <section id="sec-08" class="p-5 md:p-12 lg:p-24 pb-20 md:pb-32 bg-slate-50/50">
+                <div class="flex items-center gap-3 md:gap-4 mb-6 md:mb-8">
+                    <span class="text-3xl md:text-4xl font-black text-brand-500">08</span>
+                    <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Why Hire I</h2>
+                </div>
+                
+                <p class="text-sm md:text-lg text-slate-700 mb-8 md:mb-10 font-medium">Most candidates submit a content calendar. I submitted a demand generation system. What you are reading is not a portfolio piece - it is a functional growth infrastructure built specifically for FireAI, based on a live audit of your website, product, and positioning.</p>
+
+                <div class="space-y-4 md:space-y-6 mb-10 md:mb-16">
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2"><span class="text-brand-500">01.</span> Strategic Thinking</h4>
+                        <p class="text-xs md:text-sm text-slate-600 font-medium">I didn't just brainstorm random content ideas. I reverse-engineered your revenue goals. Every post, video, and carousel in this plan maps directly to getting emails and booking demos. A normal creator posts for likes; I build systems that make the business win.</p>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2"><span class="text-brand-500">02.</span> Systems Thinking at Scale</h4>
+                        <p class="text-xs md:text-sm text-slate-600 font-medium">I build true production systems, not just basic to-do lists. The funnels and content engines in this plan are built to scale. You can hand this exact playbook to your team and they can run it smoothly from day one.</p>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2"><span class="text-brand-500">03.</span> Platform-Native Execution</h4>
+                        <p class="text-xs md:text-sm text-slate-600 font-medium">Generic plans copy-paste the same post everywhere. This plan is different. I treat LinkedIn like a boardroom, Twitter like a public debate, Instagram for visual proof, and YouTube for deep trust.</p>
+                    </div>
+                    <div class="bg-white p-4 md:p-6 rounded-xl border border-slate-200 shadow-sm">
+                        <h4 class="text-base md:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2"><span class="text-brand-500">04.</span> Revenue Focus</h4>
+                        <p class="text-xs md:text-sm text-slate-600 font-medium">Followers and likes don't matter unless they turn into revenue. I designed this system with one main goal: getting demo-qualified leads. This $0 budget organic strategy is built to drive 100+ demo requests every month.</p>
+                    </div>
+                </div>
+
+                <div class="text-center border-t border-slate-200 pt-10 md:pt-16">
+                    <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-3 md:mb-4">The Only Variable Left <br><span class="text-slate-500">Is who executes this.</span></h3>
+                    <p class="text-sm md:text-lg text-slate-700 font-medium max-w-2xl mx-auto mb-6 md:mb-8">FireAI has the product. The strategy is written. The systems are designed. The only thing between FireAI and being the most recognized AI analytics brand in India is consistent, disciplined, <span class="text-brand-600 font-bold">human execution</span> day after day for 90 days.</p>
+                    
+                    <div class="inline-block bg-white border border-slate-200 shadow-md p-6 md:p-8 rounded-xl text-left w-full sm:w-auto">
+                        <div class="flex items-center gap-3 md:gap-4 mb-4">
+                            <div class="w-12 h-12 md:w-16 md:h-16 bg-brand-500 text-white rounded-full flex items-center justify-center text-xl md:text-2xl font-bold shadow-sm flex-shrink-0">RK</div>
+                            <div>
+                                <div class="text-lg md:text-2xl font-bold text-slate-900">Rehan Firoz Kadri</div>
+                                <div class="text-brand-600 text-xs md:text-sm font-bold">Growth Marketer &middot; B2B SaaS Strategy</div>
+                            </div>
+                        </div>
+                        <div class="text-slate-600 text-xs md:text-sm font-medium space-y-1 mb-4 border-b border-slate-100 pb-4">
+                            <div>therehankadri@gmail.com</div>
+                            <div>+91 8668980389</div>
+                            <div class="break-all">linkedin.com/in/therehankadri</div>
+                        </div>
+                        <div class="text-[10px] md:text-xs text-slate-400 font-bold uppercase tracking-widest flex flex-col gap-1">
+                            <span>All strategy is original work</span>
+                            <span>April 2026 &middot; Based on live audit of fireai.in</span>
+                            <span>BTech CSE, Sandip University 2026</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+    </div>
+
+    <!-- Mobile Menu Toggle Script -->
+    <script>
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('mobile-menu-overlay');
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        // Close menu when clicking a link (mobile only)
+        document.querySelectorAll('#sidebar nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                if(window.innerWidth < 768) {
+                    toggleMenu();
+                }
+            });
+        });
+    </script>
+</body>
+</html>
